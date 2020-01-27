@@ -78,7 +78,10 @@ li {
     grid-template: 50% 50% / 20% 20% 20% 20%;
     align-items: center;
     justify-content: space-evenly;
+    margin-left: 5%;
 }
+
+
 
 
 figure {
