@@ -45,7 +45,7 @@ header {
 /* Disposição menu e principal lado a lado */
 
 .inicial {
-    height: 100vh;
+    height: 80vh;
     display: grid;
     grid-template: 1fr / 8% 78%;
 }
@@ -82,18 +82,14 @@ li {
 }
 
 
-
-
 figure {
     border: 1px solid #7a3908;
     width: 100%;
     height: auto;
     text-align: center;
-
 }
 
-img {
-    
+img {    
     width: 100%;
     height: 20vh;
 }
@@ -254,22 +250,25 @@ h3 {
 
 /* Responsividade */
 
-@media screen and (min-device-width: 100px) and (max-device-width: 450px) {
+@media screen and (min-device-width: 100px) and (max-device-width: 500px) {
 
-    .principal {
-        width: 100%;
-        display: flexbox;
-        flex-flow: row wrap;
-        align-items: space-around;
-        justify-content: center;
+    .inicial {
+        height: 210vh;
     }
 
-    /* #section-imgs {
+    .principal {
+        width: 80%;
+        height: 60%;
+        display: grid;
+        grid-template: repeat(4, 1fr .5fr) / 100%;
+        align-items: center;
+        justify-content: space-around;
+        margin: 2% 0 0 auto;
         
-    } */
+    }
 
     .esquerdo {
-        width: 100%;
+        width: 50%;
     }
 
     .figure {
@@ -277,7 +276,6 @@ h3 {
         height: 1vw;
     }
 
-  
 
     footer {
         position: relative;
@@ -288,7 +286,41 @@ h3 {
 
 }
 
-@media screen and (max-device-width: 730px) {
+@media screen and (min-device-width: 501px) and (max-device-width: 900px) {
+    .inicial {
+        height: 130vh;
+    }
+
+    .principal {
+        width: 100%;
+        height: 80%;
+        display: grid;
+        grid-template: repeat(4, 1fr .5fr) / repeat(2, 40%);
+        align-items: center;
+        justify-content: space-around;
+        margin: 2% 0 0 3%;
+    }
+
+    .esquerdo {
+        width: 70%;
+    }
+
+    .figure {
+        width: 80%;
+        height: 1vw;
+    }
+
+
+    footer {
+        position: relative;
+        bottom: 0;
+    }
+
+
+
+}
+
+@media screen and (max-device-width: 944px) {
 
     #video{
         width: 80%;
@@ -299,14 +331,58 @@ h3 {
     }
 
     #video2 {
-        width: auto;
+        width: 80%;
         align-items: center;
     }
 
     video{
         width: 80%;
+    }
+
+    .like-unlike {
+        width: 85%;
+        display: grid;
+        grid-template-rows: 1;
+        grid-template-columns: 60% 10% 20%;
+        margin: 2% 2% 0 0;
+    }
+    
+    .botao {
+        border: 1px solid #000000;
+        border-radius: 3px;
+        margin: 0;
+        text-align: center; 
+        width: 5vw;
     
     }
+    
+    #curtir {
+        background-color: #220f00;
+        color: #ffffff; 
+        width: 93%;  
+        height: 3vh;  
+    }
+    
+    #descurtir {
+        background-color: #7a3908;
+        color: #ffffff;
+        width: 100%;
+        height: 3vh;
+    }
+
+    .menu-direita {
+        height: 40vh;
+    }
+
+    .titulo-recomendados {
+        height: 3%;
+    }
+
+    .recomendados {
+        width: 100%;
+        height: 5%;
+    }
+
 
     
 }
